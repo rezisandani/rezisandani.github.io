@@ -52,7 +52,8 @@
     <section class="jumbotron text-center">
       <img src="img/me.jpg" alt="Rezi Sandani" width="200" class="rounded-circle img-thumbnail"  />
       <h1 class="display-4">Rezi Sandani</h1>
-      <p class="lead">Student | Freelance</p>
+      <!-- tulisan 'Student | Freelance' pindah ke  bawah -->
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -81,7 +82,7 @@
           </div>
           <div class="col-md-4" data-aos="fade-left" data-aos-durations="1000" data-aos-delay="200">
             <p>Saya selalu mencari kesempatan untuk terus berkembang dan menantang diri sendiri. Portofolio ini adalah cerminan dari semangat eksplorasi dan keinginan saya untuk 
-              berkontribusi pada perubahan positif dalam dunia desain dan teknologi.</p>
+              berkontribusi pada perubahan positif dalam dunia programer dan teknologi lainnya.</p>
           </div>
         </div>
       </div>
@@ -265,20 +266,22 @@
   // dibawah ini tempat perintahkan semuanya secar bersamaan,kalau blm ada perintah
   AOS.init({
     // ini untuk animasinya berjalan skali saat di dcrol
-    once: true, 
+    // once: true, 
   });
 </script>
 <!-- AOS 2 END -->
 
 <!-- GSAP -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
 <!-- MY CODE to gsap -->
   <script>
-    gsap.from('.jumbotron img', { duration: 1, y: -100, opacity: 0, 
-      ease: "bounce.out" ,
-      // ease: "elastic.out(1,0.3)"
-    });
-  </script>
+    gsap.registerPlugin(TextPlugin)
+    gsap.to('.lead', {duration: 2, delay: 1.5, text:'Student | Freelance'})
+    gsap.from('.jumbotron img', { duration: 1, y: -100, opacity: 0, ease: 'back' ,});
+    gsap.from('.navbar', {duration: 1.5, y: -100, opacity:0, ease:'bounce.out'});
+    gsap.from('.display-4', {duration: 1, x: -50, opacity:0, ease:'back'});
+    </script>
 <!-- GSAP END -->
 
     <!-- CONNECT TO GOOGLESHEET -->

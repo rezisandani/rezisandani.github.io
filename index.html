@@ -169,23 +169,41 @@
   
   <div class="row justify-content-center">
     <div class="col-md-5">
-      <form>
+      <!-- INI NOTIP  -->
+      <div class="alert alert-success alert-dismissible fade show d-none my-alert "  role="alert">
+        <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <!-- NOTIP END -->
+      <!-- ini nama form -->
+      <form name="rezi-contact-form">
         <div class="mb-3">
           <label for="Name" class="form-label">Nama Lengkap</label>
+          <!-- !PENTING! name yg kedua harus sama dengan kolom nama yg ada di google sheet Dst. -->
           <input type="text" class="form-control" id="name" 
-          aria-describedby="emailHelp" />
+          aria-describedby="name" name="nama"/>
         <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
+          <label for="email" class="form-label">Email/No Wa</label>
           <input type="email" class="form-control" id="email" 
-          aria-describedby="email" />
+          aria-describedby="email" name="email"/>
         </div>
         <div class="mb-3">
           <label for="pesan" class="form-label">Pesan</label>
-          <textarea class="form-control" id="pesan" rows="3"></textarea>
+          <textarea class="form-control " id="pesan" name="pesan" rows="3"></textarea>
         </div>
         
-        <button type="submit" class="btn btn-primary">Kirim</button>
-        <!-- CONTENT  -->
+        <!-- INI BUTTON -->
+        <button type="submit" class="btn btn-primary btn-kirim ">Kirim</button>
+
+        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Loading...
+        </button>
+        <!-- INI BUTTON end -->
+
+        <!-- END CONTACT -->
+
+        <!-- SOSMED  -->
         <div class="container-content">
           <a href="https://www.facebook.com/rezi.sndni" class="a-content">
             <img src="img/projects/fb.png" class="img-content" />
@@ -218,5 +236,36 @@
     <!-- END FOOTER -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- CONNECT TO GOOGLESHEET -->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwi1Lpdp14x7BUjhrtTWmNrzBk7fVavBf1q25npRA1rBtiQZGEPCx-zxhyJJHMEvjCl/exec';
+      // isi dalam kurung itu adalah nama formnya yg di atas
+      const form = document.forms['rezi-contact-form'];
+
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading= document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert')
+    
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // ketika tombol submit di klik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => {  
+        // tampilkan tombol kirim, hilangkan tombol loading
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        // tampilkan alert notip
+        myAlert.classList.toggle('d-none');
+        // reset formnya
+        form.reset();
+            console.log('Success!', response)
+          })
+          .catch(error => console.error('Error!', error.message));
+      });
+    </script>
   </body>
 </html>

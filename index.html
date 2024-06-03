@@ -8,6 +8,11 @@
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- END BOOTSTRAP ICONS -->
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS END -->
+
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- END MY CSS -->
@@ -43,9 +48,9 @@
     </nav>
     <!-- END NAVBAR -->
 
-    <!-- JUMBROTRON -->
+    <!-- JUMBROTRON (bagian foto) -->
     <section class="jumbotron text-center">
-      <img src="img/me.jpg" alt="Rezi Sandani" width="200" class="rounded-circle img-thumbnail" />
+      <img src="img/me.jpg" alt="Rezi Sandani" width="200" class="rounded-circle img-thumbnail"  />
       <h1 class="display-4">Rezi Sandani</h1>
       <p class="lead">Student | Freelance</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -58,22 +63,23 @@
     </section>
     <!-- END JUMBROTRON -->
 
-    <!-- ABOUT -->
+    <!-- ABOUT ME -->
     <section id="about">
-      <div class="container">
+      <div class="container" >
         <div class="row text-center mb-3">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <!-- Contoh penerapan AOS, data-aos="fade-right" DKK-->
+          <div class="col-md-4" data-aos="fade-right" data-aos-durations="1000">
             <p>Selamat datang di portofolio kreatif saya!
               <br>
               Saya Rezi Sandani, seorang mahasiswa bersemangat dari Institut Bisnis dan Teknologi Indonesia (INSTIKI)
                dengan kecintaan mendalam pada dunia teknologi😁.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-durations="1000" data-aos-delay="200">
             <p>Saya selalu mencari kesempatan untuk terus berkembang dan menantang diri sendiri. Portofolio ini adalah cerminan dari semangat eksplorasi dan keinginan saya untuk 
               berkontribusi pada perubahan positif dalam dunia desain dan teknologi.</p>
           </div>
@@ -97,52 +103,66 @@
             <h2>My Projects</h2>
           </div>
         </div>
+        <!-- project 1 -->
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-durations="500">
               <a href="http://congkasae.rf.gd/" style="text-decoration: none;">
-              <img src="img/projects/p1.jpg" class="card-img-top" alt="Project 1" />
-              <div class="card-body">
-               
-                <p class="card-text">Ini adalah salah satu project saya,yaitu saya membuat Virtual Reality Tour
-                  di Pura Khayangan Tiga yang berada di desa sibangkaja.
-                </p>
+                <img src="img/projects/p1.jpg" class="card-img-top" alt="Project 1" />
+                <div class="card-body">
+                  
+                  <p class="card-text">Ini adalah salah satu project saya,yaitu saya membuat Virtual Reality Tour
+                    di Pura Khayangan Tiga yang berada di desa sibangkaja.
+                  </p>
                 </a>
               </div>
             </div>
           </div>
+          <!-- project 1 end -->
+
+          <!-- project 2 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-durations="500" data-aos-delay="100">
               <img src="img/projects/p2.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
                 <p class="card-text">Project will be uploaded soon</p>
               </div>
             </div>
           </div>
+          <!-- project 2 end-->
+
+          <!-- project 3 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-durations="500" data-aos-delay="200">
               <img src="img/projects/p3.jpg" class="card-img-top" alt="Project 3" />
               <div class="card-body">
                 <p class="card-text">Project will be uploaded soon</p>
               </div>
             </div>
           </div>
+          <!-- project 3 end -->
+
+          <!-- project 4 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-right" data-aos-durations="500" data-aos-delay="300">
               <img src="img/projects/p4.jpg" class="card-img-top" alt="Project 4" />
               <div class="card-body">
                 <p class="card-text">Project will be uploaded soon</p>
               </div>
             </div>
           </div>
+          <!-- project 4 end -->
+
+          <!-- project 5 -->
           <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/projects/p5.jpg" class="card-img-top" alt="Project 5" />
+            <div class="card" data-aos="flip-right" data-aos-durations="500" data-aos-delay="400">
+              <img src="img/projects/p5.jpg" class="card-img-top" alt="Project 5"/>
               <div class="card-body">
                 <p class="card-text">Project will be uploaded soon</p>
               </div>
             </div>
           </div>
+          <!-- project 5 end -->
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -235,7 +255,31 @@
     </footer>
     <!-- END FOOTER -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- BOOTSTRAP END -->
+
+<!-- AOS 2 -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  // dibawah ini tempat perintahkan semuanya secar bersamaan,kalau blm ada perintah
+  AOS.init({
+    // ini untuk animasinya berjalan skali saat di dcrol
+    once: true, 
+  });
+</script>
+<!-- AOS 2 END -->
+
+<!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<!-- MY CODE to gsap -->
+  <script>
+    gsap.from('.jumbotron img', { duration: 1, y: -100, opacity: 0, 
+      ease: "bounce.out" ,
+      // ease: "elastic.out(1,0.3)"
+    });
+  </script>
+<!-- GSAP END -->
 
     <!-- CONNECT TO GOOGLESHEET -->
     <script>

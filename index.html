@@ -166,6 +166,52 @@
           <!-- project 5 end -->
         </div>
       </div>
+
+    <!-- MY DEVICE -->
+    <section class="my-device">
+      <div class="container">
+        <!-- row 1 -->
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>My Device</h2>
+          </div>
+        </div>
+        <!-- row 1 end -->
+        <div class="row">
+          <!-- iphone -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="device-box">
+              <h4 class="device-name">
+               Acer Nitron 5</h4>
+               <img src="img/device/iphone11.png" alt="Iphone 11" class="device-img">
+              <a href="https://www.tokopedia.com/ismileofficial/apple-iphone-11-garansi-resmi-64gb-128gb-128-gb-purple" class="btn btn-light
+              device-detail-button"> Show Details</a>
+            </div>
+          </div>
+          <!-- oppo -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="device-box">
+              <h4 class="device-name">
+               Acer Nitron 5</h4>
+               <img src="img/device/oppo.webp" alt="Oppo f11 pro" class="device-img">
+              <a href="https://www.tokopedia.com/mbokbtq/oppo-f-11-pro-6-gb-ram-64-gb-rom-aurora-green-thunder-black?extParam=ivf%3Dfalse%26src%3Dsearch&refined=true" class="btn btn-light
+              device-detail-button"> Show Details</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="device-box">
+              <h4 class="device-name">
+               Acer Nitron 5</h4>
+               <img src="img/device/acer.png" alt="acer" class="device-img">
+              <a href="https://www.tokopedia.com/paradisestoreid/laptop-acer-nitro-5-an515-58-70la-core-i7-gen12h-16gb-512gb-rtx4050?extParam=ivf%3Dfalse&src=topads" class="btn btn-light
+              device-detail-button"> Show Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MY DEVICE END -->
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -242,6 +288,8 @@
             
           </a>
         </div>
+        <!-- SOSMED END  -->
+
         <!-- CONTENT END -->
       </form>
     </div>
@@ -316,5 +364,17 @@
           .catch(error => console.error('Error!', error.message));
       });
     </script>
+
+    <!-- tilt js -->
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+<script type="text/javascript">
+  // tingggal di ganti elemen mana yg mau dimasukkin tilt cth device
+	VanillaTilt.init(document.querySelectorAll(".device-box"), {
+		max: 35,
+		speed: 1000,
+    scale: 1.1,
+    glare: true,
+	});
+</script>
   </body>
 </html>

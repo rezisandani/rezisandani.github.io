@@ -68,7 +68,7 @@
     <section id="about">
       <div class="container" >
         <div class="row text-center mb-3">
-          <div class="col">
+          <div class="col" aos-init aos-animate" data-aos="fade-down">
             <h2>About Me</h2>
           </div>
         </div>
@@ -196,6 +196,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <!-- NOTIP END -->
+      
       <!-- ini nama form -->
       <form name="rezi-contact-form">
         <div class="mb-3">
@@ -267,6 +268,7 @@
   AOS.init({
     // ini untuk animasinya berjalan skali saat di dcrol
     // once: true, 
+    duration: 3000,
   });
 </script>
 <!-- AOS 2 END -->

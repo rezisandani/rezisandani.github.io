@@ -1,130 +1,132 @@
     .jumbotron {
-    padding-top: 6rem;
-    background-color: #e2edff;
-}
+        padding-top: 6rem;
+        background-color: #e2edff;
+    }
 
-#projects {
+    #projects {
 
-    background-color: #e2edff;
-}
+        background-color: #e2edff;
+    }
 
-section {
-    padding-top: 5rem;
-}
+    section {
+        padding-top: 5rem;
+    }
 
-.container-content {
-   
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
+    .container-content {
 
-.img-content  {
-    width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-content {
+        width: 40px;
         height: 40px;
         border: 2px solid #ffffff;
-}
-p {
-    text-align: center;
-}
+    }
 
-.img2-content{
-    width: 50px;
-    height: 50px;
-    border: 2px solid #ffffff;
-}
+    p {
+        text-align: center;
+    }
 
-/* MY KEYBOARD SECTION */
-.device-box {
-    position: relative;
-    background-color: #0D6EFD;
-    border-radius: 10px;
-    height: 500px;
-    /* overflow: hidden; */
-    transform-style: preserve-3d;
+    .img2-content {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #ffffff;
+    }
 
-}
+    /* MY KEYBOARD SECTION */
+    .device-box {
+        position: relative;
+        background-color: #0D6EFD;
+        border-radius: 10px;
+        height: 500px;
 
-.device-box::before {
-    content: 'MY';
-    position: absolute;
-    color: #ffffff;
-    font-size: 6em;
-    font-weight: bold;
-    font-style: italic;
-    top: 30px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    opacity: 0;
-    transition: 0.5s;
-}
+        transform-style: preserve-3d;
 
-.device-box:hover::before {
-    opacity: 0.2;
-}
+    }
 
-.device-box::after {
-    content: 'DEVICE';
-    position: absolute;
-    color: #ffffff;
-    font-size: 4.3em;
-    font-weight: bold;
-    font-style: italic;
-    top: 350px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    opacity: 0;
-    transition: 0.5s;
-}
+    .device-box::before {
+        content: 'MY';
+        position: absolute;
+        color: #ffffff;
+        font-size: 6em;
+        font-weight: bold;
+        font-style: italic;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        transition: 0.5s;
+    }
 
-.device-box:hover::after {
-    opacity: 0.2;
-}
+    .device-box:hover::before {
+        opacity: 0.2;
+    }
 
-.device-name {
-    position:absolute;
-    top: 0;
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
-    font-size: 2em;
-    opacity: 0;
-    transform: translate3d(0,0,50px);
-    transition: 0.5s;
-}
+    .device-box::after {
+        content: 'DEVICE';
+        position: absolute;
+        color: #ffffff;
+        font-size: 4.3em;
+        font-weight: bold;
+        font-style: italic;
+        top: 350px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        transition: 0.5s;
+    }
 
-.device-box:hover .device-name {
-    top: 20px;
-    opacity: 1;
-}
+    .device-box:hover::after {
+        opacity: 0.2;
+    }
 
-/* button */
-.device-detail-button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform:translate3d(-50%, 0, 100px);
-    opacity: 0;
-    transition: 0.5s;
-}
+    .device-name {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: #ffffff;
+        text-align: center;
+        font-size: 2em;
+        opacity: 0;
+        transform: translate3d(0, 0, 50px);
+        transition: 0.5s;
+    }
 
-.device-box:hover .device-detail-button{
-    opacity: 1;
-    bottom: 20px;
-    transition: 0.5s;
-}
+    .device-box:hover .device-name {
+        top: 20px;
+        opacity: 1;
+    }
 
-/* gambar device */
+    /* button */
+    .device-detail-button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate3d(-50%, 0, 100px);
+        opacity: 0;
+        transition: 0.5s;
+        z-index: 3;
+    }
 
-.device-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translate3d(-50%, -50%, 80px);
-    max-width: 350px;
-}
+    .device-box:hover .device-detail-button {
+        opacity: 1;
+        bottom: 20px;
+        /* transition: 0.5s; */
+    }
 
-.device-box:hover .device-img {
-    transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
-}
+    /* gambar device */
 
+    .device-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 80px);
+        max-width: 350px;
+        transition: 0.5s;
+    }
+
+    .device-box:hover .device-img {
+        transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+    }
